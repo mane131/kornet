@@ -1,34 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KORNET.LAT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KORNET.LAT</title>
 
-    <style>
-        html, body {
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background: black;
-        }
+<style>
+    html, body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        color: white;
+        background: black;
+    }
 
-        img {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover; /* fills screen */
-            user-select: none;
-            pointer-events: none;
-        }
-    </style>
+   
+    .bg {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    
+    .overlay {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(0,0,0,0.6);
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .discord {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 10px 14px;
+        background: #5865F2;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+
+    /* Stream */
+    .stream {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 360px;
+        height: 202px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+</style>
 </head>
+
 <body>
 
-    <img src="https://raw.githubusercontent.com/mane131/kornet/main/kornetlat.gif">
+
+<img class="bg" src="kornetlat.gif">
+
+
+<div class="stream">
+    <iframe
+        src="https://www.youtube.com/watch?v=-HBKkySBsbQ"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+</div>
+
+
+<div class="overlay">
+    <div>
+        Visits:
+        <img src="https://hitcounter.dev/api/hit?url=https://mane131.github.io/kornet" />
+    </div>
+
+    <a class="discord" href="https://discord.gg/FhvM9NXQya" target="_blank">
+        Join Discord
+    </a>
+</div>
 
 </body>
 </html>
