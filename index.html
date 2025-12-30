@@ -6,86 +6,88 @@
 <title>KORNET.LAT</title>
 
 <style>
+/* 1. The .bg <img> tag is removed, and the background is now set directly on the <body>.
+2. The URL in the 'background-image' must still be 100% correct and accessible.
+*/
 html, body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: black;
-    font-family: Arial, sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
 }
 
-.bg {
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
+body {
+    /* Set the background GIF here */
+    background-image: url('https://mane131.github.io/kornet/kornetlat.gif');
+    background-color: black; /* Fallback color in case the GIF fails to load */
+    background-size: cover; /* Equivalent to object-fit: cover, ensures it fills the screen */
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+/* --- Other styles remain the same --- */
 
 .stream {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 360px;
-    height: 202px;
-    border-radius: 10px;
-    overflow: hidden;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 360px;
+    height: 202px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Ensure the iframe fills its container */
+.stream iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .overlay {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: rgba(0,0,0,0.6);
-    padding: 12px;
-    border-radius: 10px;
-    color: white;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.6);
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
 }
 
 .discord {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 8px 12px;
-    background: #5865F2;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #5865F2;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
 }
 </style>
 </head>
 
 <body>
 
-
-<img class="bg" src="https://mane131.github.io/kornet/kornetlat.gif" alt="">
-
-
-
-
 <div class="stream">
 <iframe
-  src="https://www.youtube.com/embed/-HBKkySBsbQ?autoplay=1&mute=1&controls=0&loop=1&playlist=-HBKkySBsbQ"
-  allow="autoplay; encrypted-media"
-  allowfullscreen>
+  src="https://www.youtube.com/embed/-HBKkySBsbQ?autoplay=1&mute=1&controls=0&loop=1&playlist=-HBKkySBsbQ"
+  allow="autoplay; encrypted-media"
+  allowfullscreen>
 </iframe>
 </div>
 
 
 <div class="overlay">
-    <div>
-        Visits:
-        <img src="https://visitor-badge.laobi.icu/badge?page_id=mane131.kornet">
-    </div>
+    <div>
+        Visits:
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=mane131.kornet" alt="Visitor count">
+    </div>
 
-    <a class="discord" href="https://discord.gg/FhvM9NXQya" target="_blank">
-        Join Discord
-    </a>
+    <a class="discord" href="https://discord.gg/FhvM9NXQya" target="_blank">
+        Join Discord
+    </a>
 </div>
 
 </body>
 </html>
-
-
-
