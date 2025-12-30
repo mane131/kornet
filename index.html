@@ -6,9 +6,6 @@
 <title>KORNET.LAT</title>
 
 <style>
-/* 1. The .bg <img> tag is removed, and the background is now set directly on the <body>.
-2. The URL in the 'background-image' must still be 100% correct and accessible.
-*/
 html, body {
     margin: 0;
     width: 100%;
@@ -18,43 +15,48 @@ html, body {
 }
 
 body {
-    /* Set the background GIF here */
+    /* Full-Screen GIF Background */
     background-image: url('https://mane131.github.io/kornet/kornetlat.gif');
-    background-color: black; /* Fallback color in case the GIF fails to load */
-    background-size: cover; /* Equivalent to object-fit: cover, ensures it fills the screen */
+    background-color: black; 
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* --- Other styles remain the same --- */
-
+/* YouTube Stream (Top Right) */
 .stream {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 20px; /* Positioned from the top */
+    right: 20px; /* Positioned from the right */
     width: 360px;
     height: 202px;
     border-radius: 10px;
     overflow: hidden;
+    /* Added a subtle shadow to help it stand out */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
 }
 
-/* Ensure the iframe fills its container */
 .stream iframe {
     width: 100%;
     height: 100%;
     border: none;
 }
 
+/* Overlay (Bottom Right) */
 .overlay {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: rgba(0,0,0,0.6);
+    bottom: 20px; /* Positioned from the bottom */
+    right: 20px; /* CHANGED: Positioned from the right side */
+    left: auto; /* Ensure it respects the right positioning */
+    background: rgba(0,0,0,0.7); /* Slightly darker background for better contrast */
     padding: 12px;
     border-radius: 10px;
     color: white;
+    /* Ensure text alignment for the elements inside */
+    text-align: right; 
 }
 
+/* Discord Button */
 .discord {
     display: inline-block;
     margin-top: 8px;
@@ -63,7 +65,23 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 6px;
+    font-weight: bold;
+    /* Added subtle hover effect */
+    transition: background 0.3s;
 }
+
+.discord:hover {
+    background: #4e5ad0;
+}
+
+/* Visitor Badge Alignment */
+.overlay div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right side of the box */
+    gap: 8px;
+}
+
 </style>
 </head>
 
