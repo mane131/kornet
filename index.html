@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head><script src="chrome-extension://pphgdbgldlmicfdkhondlafkiomnelnk/content/location/location.js" id="pphgdbgldlmicfdkhondlafkiomnelnk"></script><script src="chrome-extension://pphgdbgldlmicfdkhondlafkiomnelnk/libs/extend-native-history-api.js"></script><script src="chrome-extension://pphgdbgldlmicfdkhondlafkiomnelnk/libs/requests.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KORNET.LAT</title>
 
 <style>
 html, body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
+&nbsp; &nbsp; margin: 0;
+&nbsp; &nbsp; width: 100%;
+&nbsp; &nbsp; height: 100%;
+&nbsp; &nbsp; overflow: hidden;
+&nbsp; &nbsp; font-family: Arial, sans-serif;
 }
 
 body {
@@ -25,13 +23,13 @@ body {
 
 /* YouTube Stream (Top Right) */
 .stream {
-    position: fixed;
-    top: 20px; /* Positioned from the top */
-    right: 20px; /* Positioned from the right */
-    width: 360px;
-    height: 202px;
-    border-radius: 10px;
-    overflow: hidden;
+&nbsp; &nbsp; position: fixed;
+&nbsp; &nbsp; top: 20px; /* Positioned from the top */
+&nbsp; &nbsp; right: 20px; /* Positioned from the right */
+&nbsp; &nbsp; width: 360px;
+&nbsp; &nbsp; height: 202px;
+&nbsp; &nbsp; border-radius: 10px;
+&nbsp; &nbsp; overflow: hidden;
     /* Added a subtle shadow to help it stand out */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
 }
@@ -44,27 +42,27 @@ body {
 
 /* Overlay (Bottom Right) */
 .overlay {
-    position: fixed;
-    bottom: 20px; /* Positioned from the bottom */
-    right: 20px; /* CHANGED: Positioned from the right side */
+&nbsp; &nbsp; position: fixed;
+&nbsp; &nbsp; bottom: 10px; /* Positioned from the bottom */
+&nbsp; &nbsp; right: 20px; /* CHANGED: Positioned from the right side */
     left: auto; /* Ensure it respects the right positioning */
-    background: rgba(0,0,0,0.7); /* Slightly darker background for better contrast */
-    padding: 12px;
-    border-radius: 10px;
-    color: white;
+&nbsp; &nbsp; background: rgba(0,0,0,0.7); /* Slightly darker background for better contrast */
+&nbsp; &nbsp; padding: 12px;
+&nbsp; &nbsp; border-radius: 10px;
+&nbsp; &nbsp; color: white;
     /* Ensure text alignment for the elements inside */
     text-align: right; 
 }
 
 /* Discord Button */
 .discord {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 8px 12px;
-    background: #5865F2;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
+&nbsp; &nbsp; display: inline-block;
+&nbsp; &nbsp; margin-top: 8px;
+&nbsp; &nbsp; padding: 8px 12px;
+&nbsp; &nbsp; background: #5865F2;
+&nbsp; &nbsp; color: white;
+&nbsp; &nbsp; text-decoration: none;
+&nbsp; &nbsp; border-radius: 6px;
     font-weight: bold;
     /* Added subtle hover effect */
     transition: background 0.3s;
@@ -83,29 +81,27 @@ body {
 }
 
 </style>
-</head>
+<script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;]" src="chrome-extension://pphgdbgldlmicfdkhondlafkiomnelnk/executors/traffic.js"></script></head>
 
-<body>
+<body __processed_dcb07003-f22a-4994-898f-ce4bd55beda1__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6InBwaGdkYmdsZGxtaWNmZGtob25kbGFma2lvbW5lbG5rIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZGlzYWJsZWQiLCJDT05GSUciOiJkaXNhYmxlZCJ9LCJ2ZXJzaW9uIjoiMi4wLjM1Iiwic2NvcmUiOjIwMDM1fV0=" bis_skin_checked="1">
 
-<div class="stream">
-<iframe
-  src="https://www.youtube.com/embed/-HBKkySBsbQ?autoplay=1&mute=1&controls=0&loop=1&playlist=-HBKkySBsbQ"
-  allow="autoplay; encrypted-media"
-  allowfullscreen>
+<div class="stream" bis_skin_checked="1">
+<iframe &nbsp;="" src="https://www.youtube.com/embed/-HBKkySBsbQ?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=-HBKkySBsbQ" allow="autoplay; encrypted-media" allowfullscreen="">
 </iframe>
 </div>
 
 
-<div class="overlay">
-    <div>
-        Visits:
-        <img src="https://visitor-badge.laobi.icu/badge?page_id=mane131.kornet" alt="Visitor count">
-    </div>
+<div class="overlay" bis_skin_checked="1">
+&nbsp; &nbsp; <div bis_skin_checked="1">
+&nbsp; &nbsp; &nbsp; &nbsp; Visits:
+&nbsp; &nbsp; &nbsp; &nbsp; <img src="https://visitor-badge.laobi.icu/badge?page_id=mane131.kornet" alt="Visitor count">
+&nbsp; &nbsp; </div>
 
-    <a class="discord" href="https://discord.gg/FhvM9NXQya" target="_blank">
-        Join Discord
-    </a>
+&nbsp; &nbsp; <a class="discord" href="https://discord.gg/FhvM9NXQya" target="_blank" bis_skin_checked="1">
+&nbsp; &nbsp; &nbsp; &nbsp; Join Discord
+&nbsp; &nbsp; </a>
 </div>
 
-</body>
-</html>
+
+
+</body></html>
